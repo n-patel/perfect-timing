@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nikhil Patel: Perfect Timing</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div id="info-col" class="col-md-4 col-sm-12 col-xs-12">
+                <h1 class="text-center">Perfect Timing</h1>
+                <hr>
+                <p>Provides two different timers:</p>
+                <ul>
+                    <li>A timer (counts down from your input to zero)</li>
+                    <li>A stopwatch (counts up from zero to your input)</li>
+                </ul>
+                <div id="seconds-input-group" class="input-group">
+                    <!-- restrict seconds input to between 0 and 10 years (arbitrarily chosen) -->
+                    <input id="seconds-input" type="number" min="0" max="315569260" class="form-control" placeholder="Number of seconds">
+                </div>
+                <hr class="mobile-no-hidden">
+            </div>
+
+
+            <div id="timer-col" class="col-md-4 col-sm-12 col-xs-12">
+                <h1 class="text-center">Timer <small>Count down</small></h1>
+                <div id="countdown">
+                    <hr>
+                    <h3 id="down-clock" class="clock-text text-center">0</h3>
+                    <hr>
+                    <div id="countdown-controls" class="btn-group">
+                        <button type="button" class="btn btn-default disabled countdown-control play-button">
+                            <span class="glyphicon glyphicon-play"></span>
+                        </button>
+                        <button type="button" class="btn btn-default disabled countdown-control pause-button">
+                            <span class="glyphicon glyphicon-pause"></span>
+                        </button>
+                        <button type="button" class="btn btn-default countdown-control reset-button">
+                            <span class="glyphicon glyphicon-repeat"></span>
+                        </button>
+                    </div>
+                </div><!-- /#countdown -->
+                <hr class="mobile-no-hidden">
+            </div><!-- /#timer-col -->
+
+
+            <div id="stopwatch-col" class="col-md-4 col-sm-12 col-xs-12">
+                <h1 class="text-center">Stopwatch <small>Count up</small></h1>
+                <div id="countup">
+                    <hr>
+                    <h3 id="up-clock" class="clock-text text-center">0</h3>
+                    <hr>
+                    <div id="countup-controls" class="btn-group">
+                        <button type="button" class="btn btn-default disabled countup-control play-button">
+                            <span class="glyphicon glyphicon-play"></span>
+                        </button>
+                        <button type="button" class="btn btn-default disabled countup-control pause-button">
+                            <span class="glyphicon glyphicon-pause"></span>
+                        </button>
+                        <button type="button" class="btn btn-default countup-control reset-button">
+                            <span class="glyphicon glyphicon-repeat"></span>
+                        </button>
+                    </div>
+                </div><!-- /#countup -->
+                <hr class="mobile-no-hidden">
+            </div><!-- /#stopwatch-col -->
+        </div><!-- .row -->
+    </div><!-- .container -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+    <script src="assets/js/time_utils.js"></script>
+    <script src="assets/js/stopwatch.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:300,400';
+
+/* ------------ Typography ------------ */
+body {
+    font-family: 'Open Sans';
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 2.5em;
+}
+
+h1 small {
+    color: #aaaaaa;
+    font-weight: 300;
+    font-size: 0.5em;
+}
+
+sub {
+    color: #808080;
+    font-size: 50%;
+    font-weight: 300;
+    top: 0em;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.clock-text {
+    font-size: 2.2em;
+    font-weight: 300;
+    line-height: 1.5;        /* in case of overflow (when the number of days is very large) */
+}
+
+.glyphicon {
+    font-size: 2.2em;
+}
+
+.glyphicon-repeat {
+    transform: scaleX(-1);    /* Horizontally mirror */
+}
+
+
+/* ------------ Layout ------------ */
+#timer-col {
+    border-left: 1px #eeeeee solid;
+    border-right: 1px #eeeeee solid;
+}
+
+#countup, #countdown {
+    text-align: center;
+}
+
+#seconds-input-group {
+    text-align: center;
+    margin-left: 20%;
+    margin-top: 20px;
+    width: 180px;
+}
+
+/* Center the container on the page */
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.mobile-no-hidden {
+    display: none;
+}
+
+@media (max-width: 768px) {        /* Bootstrap grid system definition of phones */
+    .container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 991px) {       /* Bootstrap grid system definition of tablets */
+    .container {
+        top: 500px;
+    }
+
+    .mobile-no-hidden {
+        display: block;
+        width: 100%;
+        border-top: 1px solid #999999;
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+
+    #timer-col {
+        border-left: 0px;
+        border-right: 0px;
+    }
+
+    #seconds-input-group {
+        margin-left: 40px;
+    }
+}
+
+/* Disable the default Bootstrap blue highlighting around focused buttons */
+.btn:focus,.btn:active {
+   outline: none !important;
+}
